@@ -1,0 +1,971 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>テクノロジーソリューション株式会社</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#1a1a1a", // Updated to a modern dark color
+              secondary: "#fe8300", // Updated to a vibrant orange
+            },
+            borderRadius: {
+              none: "0px",
+              sm: "4px",
+              DEFAULT: "8px",
+              md: "12px",
+              lg: "16px",
+              xl: "20px",
+              "2xl": "24px",
+              "3xl": "32px",
+              full: "9999px",
+              button: "8px",
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-white text-gray-800">
+    <!-- Header -->
+    <header id="home" class="w-full sticky top-0 z-50 bg-primary">
+      <div
+        class="container mx-auto px-2 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <a
+            href="#"
+            class="text-3xl text-white tracking-wider hover:text-white/90 transition-all duration-300 flex items-center"
+          >
+            <span class="backdrop-blur-sm p-1 flex items-center">
+              <img
+                src="img/logo.png"
+                alt="Logo"
+                class="h-16 w-auto object-contain mx-auto"
+              />
+            </span>
+          </a>
+          <nav class="hidden md:flex ml-10">
+            <a
+              href="#"
+              class="mx-3 text-white/90 hover:text-white transition-colors"
+              >ホーム</a
+            >
+            <a
+              href="#about"
+              class="mx-3 text-white/90 hover:text-white transition-colors"
+              >会社概要</a
+            >
+            <a
+              href="#case-studies"
+              class="mx-3 text-white/90 hover:text-white transition-colors"
+              >事例紹介</a
+            >
+            <a
+              href="#contact"
+              class="mx-3 text-white/90 hover:text-white transition-colors"
+              >お問い合わせ</a
+            >
+          </nav>
+        </div>
+        <div
+          class="block md:hidden text-white text-2xl font-bold tracking-wider text-center py-4 px-6 bg-primary rounded-lg shadow-md"
+        >
+          <h2>テクソリ</h2>
+        </div>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+      id="homesection"
+      class="relative w-full min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden bg-[#1f1f2b] py-20 lg:py-24"
+    >
+      <img
+        src="img/bg.jpg"
+        alt="モダンなオフィスビル"
+        class="absolute inset-0 w-full h-full object-cover opacity-70"
+      />
+      <div
+        class="absolute inset-0 bg-gradient-to-r from-[#1f1f2b]/40 via-[#1f1f2b]/30 to-transparent"
+      ></div>
+      <div class="container mx-auto px-6 lg:px-8 relative z-10">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div class="text-left">
+            <h1
+              class="text-6xl lg:text-7xl font-bold mb-6 text-white leading-tight"
+            >
+              ビジネスの未来を<br />創造する
+            </h1>
+            <p class="text-xl text-gray-300 mb-10 max-w-xl">
+              データ駆動型戦略と革新的なソリューションを通じて、組織のデジタル変革を支援し、業務を最適化し、持続可能な成長を実現します。
+            </p>
+            <div class="flex flex-wrap gap-6">
+              <button
+                onclick="scrollToSection('about')"
+                class="group relative bg-primary text-white px-8 py-4 text-xl !rounded-button overflow-hidden whitespace-nowrap hover:bg-primary/90 hover:scale-105 transition-all shadow-lg"
+              >
+                <span class="relative z-10 flex items-center justify-center">
+                  <i class="ri-calendar-line mr-2"></i>
+                  今すぐ始める
+                </span>
+              </button>
+            </div>
+          </div>
+          <div class="hidden lg:block">
+            <!-- Right side is empty to maintain layout balance -->
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Key Services -->
+    <section id="about" class="pt-12 pb-32 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">
+            エンタープライズ向けソリューション
+          </h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            中堅・大企業向けの包括的なB2Bソリューションを提供し、業務効率化とデジタル変革を推進します。
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:pl-8">
+          <div
+            class="p-8 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center"
+          >
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-line-chart-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">企業戦略とデジタル変革</h3>
+            <p class="text-gray-600">
+              当社のコンサルタントが組織のインフラストラクチャを分析し、業界標準と将来の成長に合わせたスケーラブルな戦略を策定します。
+            </p>
+          </div>
+          <div
+            class="p-8 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center"
+          >
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-team-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">システム統合と開発</h3>
+            <p class="text-gray-600">
+              システム統合、クラウド移行、シームレスな業務ワークフローの構築に焦点を当てた企業全体のソリューションを実装します。
+            </p>
+          </div>
+          <div
+            class="p-8 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow text-center"
+          >
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6 mx-auto"
+            >
+              <i class="ri-shield-check-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">リスク管理とコンプライアンス</h3>
+            <p class="text-gray-600">
+              当社のエンタープライズレベルのリスク管理フレームワークにより、組織のグローバル業務全体の規制遵守とサイバーセキュリティを確保します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Management Essentials -->
+    <section class="pt-12 pb-32 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">企業管理ソリューション</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            当社のエンタープライズグレードのプラットフォームは、複雑な組織運営を大規模に管理するために必要なツールとインフラストラクチャを提供します。
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-10 md:pl-12">
+          <div class="flex items-center">
+            <div class="bg-purple-100 p-4 rounded-lg mr-6">
+              <i class="ri-bar-chart-line ri-2x text-primary"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">業績分析</h3>
+              <p class="text-gray-600">
+                高度な分析ツールでビジネスパフォーマンスを追跡・分析します。
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div class="bg-purple-100 p-4 rounded-lg mr-6">
+              <i class="ri-calendar-check-line ri-2x text-primary"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">プロジェクト管理</h3>
+              <p class="text-gray-600">
+                効率的な管理システムでプロジェクトを合理化します。
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div class="bg-purple-100 p-4 rounded-lg mr-6">
+              <i class="ri-user-settings-line ri-2x text-primary"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">人事ソリューション</h3>
+              <p class="text-gray-600">
+                包括的な人事ツールでチームを効果的に管理します。
+              </p>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <div class="bg-purple-100 p-4 rounded-lg mr-6">
+              <i class="ri-customer-service-2-line ri-2x text-primary"></i>
+            </div>
+            <div>
+              <h3 class="text-xl font-bold mb-2">顧客関係管理</h3>
+              <p class="text-gray-600">
+                CRMシステムで強固な顧客関係を構築・維持します。
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Technology Solutions Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="w-full md:w-1/2 mb-10 md:mb-0">
+            <div class="max-w-2xl mx-auto md:-ml-8 relative">
+              <img
+                src="img/tech.jpg"
+                alt="テクノロジーソリューション"
+                class="rounded-lg w-full"
+              />
+            </div>
+          </div>
+          <div class="w-full md:w-1/2">
+            <h2 class="text-3xl font-bold mb-6">
+              最先端のテクノロジーソリューション
+            </h2>
+            <p class="text-gray-600 mb-8">
+              当社の統合テクノロジーシステムは、ビジネスプロセスの効率化と革新を実現します。日本企業特有のニーズに合わせたカスタマイズが可能です。
+            </p>
+            <ul class="mb-8">
+              <li class="flex items-center mb-4">
+                <div
+                  class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <span class="text-gray-700"
+                  >クラウドインフラストラクチャの最適化</span
+                >
+              </li>
+              <li class="flex items-center mb-4">
+                <div
+                  class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <span class="text-gray-700">AIと機械学習の導入支援</span>
+              </li>
+              <li class="flex items-center">
+                <div
+                  class="w-6 h-6 bg-purple-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="ri-check-line text-primary"></i>
+                </div>
+                <span class="text-gray-700"
+                  >セキュリティ強化とコンプライアンス対応</span
+                >
+              </li>
+            </ul>
+            <button
+              class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-purple-800 transition-colors whitespace-nowrap"
+            >
+              詳細を見る
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Case Studies Section -->
+    <section id="case-studies" class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">導入事例</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            日本の大手企業におけるデジタル変革の成功事例をご紹介します。
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all"
+          >
+            <img
+              src="img/manufacturing.jpg"
+              alt="製造業の事例"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="ri-building-4-line text-primary"></i>
+                </div>
+                <h3 class="text-xl font-bold">大手製造業A社</h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                生産管理システムの刷新により、生産効率が30%向上し、不良品率が5%減少しました。
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">導入期間: 6ヶ月</span>
+                <a
+                  href="#"
+                  class="text-primary font-medium hover:underline flex items-center"
+                >
+                  詳細を見る
+                  <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all"
+          >
+            <img
+              src="img/金融.jpg"
+              alt="金融業の事例"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="ri-bank-line text-primary"></i>
+                </div>
+                <h3 class="text-xl font-bold">金融サービスB社</h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                セキュリティ強化とクラウド移行により、運用コストを25%削減し、顧客満足度が15%向上しました。
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">導入期間: 8ヶ月</span>
+                <a
+                  href="#"
+                  class="text-primary font-medium hover:underline flex items-center"
+                >
+                  詳細を見る
+                  <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all"
+          >
+            <img
+              src="img/medical.jpg"
+              alt="医療業界の事例"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div
+                  class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-3"
+                >
+                  <i class="ri-hospital-line text-primary"></i>
+                </div>
+                <h3 class="text-xl font-bold">医療法人C会</h3>
+              </div>
+              <p class="text-gray-600 mb-4">
+                電子カルテシステムの導入により、患者対応時間が40%短縮し、医療ミスが60%減少しました。
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-sm text-gray-500">導入期間: 12ヶ月</span>
+                <a
+                  href="#"
+                  class="text-primary font-medium hover:underline flex items-center"
+                >
+                  詳細を見る
+                  <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <button
+            class="bg-white border border-gray-300 text-gray-700 px-8 py-3 !rounded-button hover:bg-gray-50 transition-colors whitespace-nowrap"
+          >
+            すべての事例を見る
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Form -->
+    <section id="contact" class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl font-bold mb-4">お問い合わせ</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            フォームにご記入いただければ、24時間以内に担当者がご連絡し、個別のコンサルテーションをご案内いたします。
+          </p>
+        </div>
+        <div class="max-w-5xl mx-auto">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
+            <div class="bg-white p-8 rounded-lg shadow-md">
+              <form>
+                <div class="mb-6">
+                  <label for="name" class="block text-gray-700 mb-2 font-medium"
+                    >お名前</label
+                  >
+                  <div class="relative">
+                    <i
+                      class="ri-user-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                    ></i>
+                    <input
+                      type="text"
+                      id="name"
+                      class="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+                      placeholder="山田 太郎"
+                    />
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="email"
+                    class="block text-gray-700 mb-2 font-medium"
+                    >メールアドレス</label
+                  >
+                  <div class="relative">
+                    <i
+                      class="ri-mail-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                    ></i>
+                    <input
+                      type="email"
+                      id="email"
+                      class="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+                      placeholder="yamada@company.co.jp"
+                    />
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="company"
+                    class="block text-gray-700 mb-2 font-medium"
+                    >会社名</label
+                  >
+                  <div class="relative">
+                    <i
+                      class="ri-building-line absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
+                    ></i>
+                    <input
+                      type="text"
+                      id="company"
+                      class="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+                      placeholder="株式会社〇〇"
+                    />
+                  </div>
+                </div>
+                <div class="mb-6">
+                  <label
+                    for="message"
+                    class="block text-gray-700 mb-2 font-medium"
+                    >お問い合わせ内容</label
+                  >
+                  <div class="relative">
+                    <i
+                      class="ri-message-3-line absolute left-3 top-4 text-gray-400"
+                    ></i>
+                    <textarea
+                      id="message"
+                      rows="4"
+                      class="w-full pl-10 pr-4 py-3 bg-white border border-gray-200 rounded-lg focus:border-primary focus:ring-1 focus:ring-primary"
+                      placeholder="ご質問やご要望をご記入ください"
+                    ></textarea>
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="bg-primary text-white px-8 py-3 w-full !rounded-button hover:bg-purple-800 transition-colors whitespace-nowrap flex items-center justify-center"
+                >
+                  <i class="ri-send-plane-line mr-2"></i>
+                  送信する
+                </button>
+              </form>
+            </div>
+            <div
+              class="bg-white p-8 rounded-lg border border-gray-100 shadow-md"
+            >
+              <h3 class="text-xl font-bold mb-8">お問い合わせ後の流れ</h3>
+              <div class="space-y-8">
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <span class="text-primary font-bold">1</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold mb-2 text-gray-800">初回ヒアリング</h4>
+                    <p class="text-gray-600">
+                      30分間のオンライン会議で、ビジネスニーズと目標について話し合います。
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <span class="text-primary font-bold">2</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold mb-2 text-gray-800">提案書作成</h4>
+                    <p class="text-gray-600">
+                      お客様の具体的な要件に基づいたカスタムソリューションを提案します。
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-start">
+                  <div
+                    class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center mr-4 flex-shrink-0"
+                  >
+                    <span class="text-primary font-bold">3</span>
+                  </div>
+                  <div>
+                    <h4 class="font-bold mb-2 text-gray-800">導入支援</h4>
+                    <p class="text-gray-600">
+                      当社のチームがお客様と協力して、シームレスにソリューションを実装します。
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="mt-10 pt-6 border-t border-gray-100">
+                <div class="flex items-center">
+                  <div
+                    class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4"
+                  >
+                    <i
+                      class="ri-customer-service-2-line text-xl text-primary"
+                    ></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold text-gray-800">
+                      お電話でのお問い合わせ
+                    </h4>
+                    <p class="text-primary font-medium">03-1234-5678</p>
+                    <p class="text-sm text-gray-500">平日 9:00〜18:00</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Security Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">セキュリティとサポート</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            ビジネスデータのセキュリティを最優先し、円滑な運用を確保するための包括的なサポートを提供します。
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="p-8 bg-gray-50 rounded-lg shadow-sm text-center">
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="ri-shield-keyhole-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">データ保護</h3>
+            <p class="text-gray-600">
+              高度な暗号化とセキュリティプロトコルにより、ビジネスデータを安全に保護します。日本の個人情報保護法にも完全準拠しています。
+            </p>
+          </div>
+          <div class="p-8 bg-gray-50 rounded-lg shadow-sm text-center">
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="ri-customer-service-2-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">24時間サポート</h3>
+            <p class="text-gray-600">
+              専任のサポートチームが24時間体制でお客様をサポートし、あらゆる問題に対応します。日本語と英語でのサポートを提供しています。
+            </p>
+          </div>
+          <div class="p-8 bg-gray-50 rounded-lg shadow-sm text-center">
+            <div
+              class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-6"
+            >
+              <i class="ri-refresh-line ri-2x text-primary"></i>
+            </div>
+            <h3 class="text-xl font-bold mb-4">定期的なアップデート</h3>
+            <p class="text-gray-600">
+              機能性とセキュリティを向上させるための継続的な改善とアップデートを提供します。常に最新の技術動向に対応します。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Partners Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">主要パートナー企業</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            業界をリードする企業とのパートナーシップにより、最高品質のソリューションを提供しています。
+          </p>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+          <div class="flex flex-col items-center">
+            <div class="w-16 h-16 flex items-center justify-center mb-2">
+              <i class="ri-microsoft-fill ri-3x text-gray-700"></i>
+            </div>
+            <span class="text-gray-700 font-medium">Microsoft</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-16 h-16 flex items-center justify-center mb-2">
+              <i class="ri-amazon-fill ri-3x text-gray-700"></i>
+            </div>
+            <span class="text-gray-700 font-medium">AWS</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-16 h-16 flex items-center justify-center mb-2">
+              <i class="ri-google-fill ri-3x text-gray-700"></i>
+            </div>
+            <span class="text-gray-700 font-medium">Google Cloud</span>
+          </div>
+          <div class="flex flex-col items-center">
+            <div class="w-16 h-16 flex items-center justify-center mb-2">
+              <i class="ri-salesforce-fill ri-3x text-gray-700"></i>
+            </div>
+            <span class="text-gray-700 font-medium">Salesforce</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Testimonial Section -->
+    <section class="py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="flex flex-col md:flex-row items-start">
+          <div class="w-full md:w-1/2 flex items-stretch">
+            <img
+              src="img/boss.png"
+              alt="お客様の声"
+              class="rounded-lg mx-auto w-full max-w-xl object-cover"
+            />
+          </div>
+          <div class="w-full md:w-1/2 flex items-center">
+            <div class="max-w-lg py-12 md:mt-0 ml-0 md:ml-8">
+              <h2 class="text-3xl font-bold mb-6">お客様の声</h2>
+              <div class="mb-6">
+                <p class="text-gray-600 italic text-lg mb-4">
+                  「彼らの戦略的コンサルティングサービスにより、新たな市場機会を特定し、業務を効率化することができました。導入からわずか6ヶ月で売上が30%増加しました。」
+                </p>
+                <div class="flex items-center">
+                  <div
+                    class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4"
+                  >
+                    <i class="ri-user-3-line text-primary"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-bold">佐藤 健太郎</h4>
+                    <p class="text-gray-500">
+                      株式会社グローバルエンタープライズ 運用部長
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-purple-800 transition-colors whitespace-nowrap"
+              >
+                もっと見る
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Blog Section -->
+    <section class="py-20 bg-gray-50">
+      <div class="container mx-auto px-4 sm:px-6 md:px-8 lg:px-12">
+        <div class="text-center mb-16">
+          <h2 class="text-3xl font-bold mb-4">最新ブログ</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            ビジネス管理とプロフェッショナルサービスに関する最新の洞察、トレンド、ベストプラクティスをご紹介します。
+          </p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img
+              src="img/data.jpg"
+              alt="データ分析"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="text-sm text-gray-500 mb-2">2025年6月15日</div>
+              <h3 class="text-xl font-bold mb-3">
+                ビジネス成長のためのデータ分析活用法
+              </h3>
+              <p class="text-gray-600 mb-4">
+                データ駆動型の意思決定がどのようにビジネス運営を変革し、持続可能な成長を促進するかを学びましょう。
+              </p>
+              <a href="#" class="text-primary font-medium hover:underline"
+                >続きを読む</a
+              >
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img
+              src="img/teamwork.jpg"
+              alt="チームコラボレーション"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="text-sm text-gray-500 mb-2">2025年6月10日</div>
+              <h3 class="text-xl font-bold mb-3">
+                効果的なチームコラボレーションの構築
+              </h3>
+              <p class="text-gray-600 mb-4">
+                今日のハイブリッドワーク環境でチームの生産性とコラボレーションを向上させる戦略を発見しましょう。
+              </p>
+              <a href="#" class="text-primary font-medium hover:underline"
+                >続きを読む</a
+              >
+            </div>
+          </div>
+          <div class="bg-white rounded-lg shadow-sm overflow-hidden">
+            <img
+              src="img/digital.jpg"
+              alt="デジタル変革"
+              class="w-full h-48 object-cover"
+            />
+            <div class="p-6">
+              <div class="text-sm text-gray-500 mb-2">2025年6月5日</div>
+              <h3 class="text-xl font-bold mb-3">デジタル変革戦略</h3>
+              <p class="text-gray-600 mb-4">
+                企業がデジタルテクノロジーを活用して業務と顧客体験を変革する方法を探ります。
+              </p>
+              <a href="#" class="text-primary font-medium hover:underline"
+                >続きを読む</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="text-center mt-12">
+          <button
+            class="bg-white border border-gray-300 text-gray-700 px-8 py-3 !rounded-button hover:bg-gray-50 transition-colors whitespace-nowrap"
+          >
+            すべての記事を見る
+          </button>
+        </div>
+      </div>
+    </section>
+    <!-- CTA Section -->
+    <section class="py-20 bg-primary">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold text-white mb-6">
+          企業変革の準備はできていますか？
+        </h2>
+        <p class="text-white opacity-90 max-w-2xl mx-auto mb-8">
+          当社のエンタープライズソリューションチームにお問い合わせいただき、組織のテクノロジーインフラストラクチャをどのように最新化できるかをご相談ください。
+        </p>
+        <button
+          class="bg-white text-primary px-8 py-3 !rounded-button hover:bg-gray-100 transition-colors whitespace-nowrap"
+        >
+          今すぐ始める
+        </button>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-16">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <div>
+            <a href="#" class="block mb-6">
+              <img
+                src="img/logo.png"
+                alt="Logo"
+                class="h-12 w-auto object-contain"
+              />
+            </a>
+            <p class="text-gray-400 mb-6">
+              今日の競争の激しい市場でビジネスの成長と成功を支援するためにカスタマイズされたプロフェッショナルサービス。
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-linkedin-fill text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-twitter-x-fill text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-facebook-fill text-white"></i>
+              </a>
+              <a
+                href="#"
+                class="w-10 h-10 bg-gray-800 rounded-full flex items-center justify-center hover:bg-primary transition-colors"
+              >
+                <i class="ri-instagram-fill text-white"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">サービス</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >戦略コンサルティング</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >ビジネス開発</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >リスク管理</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >財務アドバイザリー</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >市場調査</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">会社情報</h3>
+            <ul class="space-y-3">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >会社概要</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >チーム紹介</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >採用情報</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >お問い合わせ</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >ブログ</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="text-lg font-bold mb-6">ニュースレター登録</h3>
+            <p class="text-gray-400 mb-4">
+              最新の洞察とニュースを受け取りましょう。
+            </p>
+            <form>
+              <div class="flex">
+                <input
+                  type="email"
+                  placeholder="メールアドレス"
+                  class="px-4 py-2 bg-gray-800 text-white border-none rounded-l focus:outline-none w-full"
+                />
+                <button
+                  type="submit"
+                  class="bg-primary text-white px-4 py-2 !rounded-r-button hover:bg-purple-700 transition-colors whitespace-nowrap"
+                >
+                  登録
+                </button>
+              </div>
+            </form>
+            <p class="text-gray-500 text-sm mt-4">
+              登録することで、当社の<a
+                href="#"
+                class="text-gray-400 hover:text-white"
+                >プライバシーポリシー</a
+              >に同意したことになります。
+            </p>
+          </div>
+        </div>
+        <div
+          class="pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center"
+        >
+          <p class="text-gray-400 mb-4 md:mb-0">
+            &copy; 2025 テクノロジーソリューション株式会社. All rights reserved.
+          </p>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >プライバシーポリシー</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >利用規約</a
+            >
+            <a href="#" class="text-gray-400 hover:text-white transition-colors"
+              >Cookie ポリシー</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
